@@ -2,11 +2,12 @@
 
 @Library('yucjenkinslib') _
 
-def tools = new org.devops.tools
+def tools = new org.devops.tools()
+
 pipeline {
     agent any
     stages{
-        stage{
+        stage("step 1"){
             steps{
                 script{
                     tools.PrintMes("this is my lib!")
